@@ -5,6 +5,7 @@
   <title>QRIS Generator</title>
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h2>QRIS Generator</h2>
@@ -36,7 +37,34 @@
 
   <label>Amount (Kosongkan untuk statis):</label><br>
   <input id="amount" placeholder="Contoh: 15000"><br><br>
-
+  <button id="openPopupBtn">Testing Case Abnormal dan negative case</button>
+  <!-- Struktur Popup -->
+    <div id="myPopup" class="popup-hidden">
+        <div class="popup-content">
+            <h2>Skenario untuk SW Jalin</h2>
+            <p>* scenario negatif:</p>
+                     <p>* 68XX = payment status suspend</p>
+                     <p>* 13XX = payment status RC13</p>
+                     <p>* 74XX = payment status RC74 error timeout</p>
+                     <p>* 55XX = payment status RC74 error timeout</p>
+                     <p>* 99XX = timeout</p>
+                     <p>*/</p>
+                       <p> /**</p>
+                        <p> * scenario abnormal : untuk kelanjutan 68XX case cekstatus</p>
+						            <p> * XX00 = check status sukses 00 (sukses / berhasil)</p>
+                        <p> * XX98 = check status A01 (gagal)</p>
+                        <p> * XX68 = check status suspend (kalau di jalin gagal)</p>
+                        <p> * XX13 = check status RC13 (kalau di jalin gagal)</p>
+                         <p>* XX74 = check status RC74 error timeout (kalau di jalin gagal)</p>
+                         <p>* XX55 = check status RC74 error timeout (kalau di jalin gagal)</p>
+                         <p>* XX99 = timeout (kalau dijalin pending)</p>
+                        <p> */</p>
+            <!-- Tombol untuk menutup popup -->
+            <button id="closePopupBtn">Tutup</button>
+        </div>
+    </div>
+  <script src="script.js"></script>
+  <br><br>
   <label>Aktifkan Fee?</label><br>
   <select id="feeActive">
     <option value="no">Tidak</option>
