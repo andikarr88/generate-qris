@@ -65,6 +65,56 @@
                      <p>* amount 50990 = payment status suspend</p>
                      <p>* amount 50550 = payment status RC96</p>
                         <p> *Noted : case ini URLnya harus di arahkan ke quickmock</p>
+            <h2>Skenario untuk SW ALTO CB CHINA</h2>
+            <p>* scenario negatif:</p>
+                     <p>RC_SUSPECT = "2" // Suspect</p>
+                     <p>RC_FAILED = "3" // Failed</p>
+                     <p>RC_UNKNOWN_ERROR_FROM_BANK = "4" // Unknown error from bank</p> 
+                     <p>RC_REJECTED_BY_DESTINATION_BANK = "10" // Rejected by destination bank</p> 
+                     <p>RC_REJECTED_BY_ALTO = "11" // Rejected by ALTO</p> 
+                     <p>RC_REJECTED_BY_SWITCHING = "12" // Rejected by switching</p> 
+                     <p>RC_TRANSACTION_TIMED_OUT = "20" // Transaction timed out</p> 
+                     <p>RC_IDENTICAL_TRANSACTION_SUCCESS = "30" // Identical transaction has been success</p> 
+                     <p>RC_IDENTICAL_TRANSACTION_PROCESSING = "31" // Identical transaction still on process</p> 
+                     <p>RC_IDENTICAL_TRANSACTION_FAILED = "32" // Identical transaction has been failed</p> 
+                     <p>RC_INVALID_ACCOUNT_TO_PAYMENT = "40" // Invalid account number to payment</p> 
+                     <p>RC_INVALID_ACCOUNT_TO_HOLD = "41" // Invalid account number to hold</p> 
+                     <p>RC_INVALID_AMOUNT_TO_PAYMENT = "50" // Invalid amount to payment</p> 
+                     <p>RC_INVALID_AMOUNT_TO_HOLD = "51" // Invalid amount to hold</p> 
+                     <p>RC_INTERNAL_SERVER_ERROR = "60" // Internal server error</p> 
+                     <p>RC_BANK_NOT_RESPONDING = "61" // Bank not responding</p> 
+                     <p>RC_NOT_OPERATING_HOUR = "62" // Not in operating hour</p> 
+                     <p>RC_MESSAGE_FORMAT_ERROR = "70" // Message format error</p> 
+                     <p>RC_INVALID_TRANSACTION_ALTO = "71" // Invalid transaction</p> 
+                     <p>RC_BAD_METHOD = "72" // Bad method</p> 
+                     <p>RC_INVALID_HOST = "73" // Invalid host</p> 
+                     <p>RC_UNKNOWN_CLIENT = "80" // Unknown client</p> 
+                     <p>RC_AUTHENTICATION_ERROR = "81" // Authentication error</p> 
+                     <p>RC_INVALID_TOKEN = "83" // Invalid token</p> 
+                     <p>RC_NO_CONTENT = "84" // No content</p> 
+                     <p>RC_ACCOUNT_SUSPENDED = "85" // Account is suspended</p> 
+                     <p>RC_BANK_DOES_NOT_SUPPORT = "86" // Bank does not support the transaction</p> 
+                     <p>RC_BANK_NOT_SUPPORTED = "87" // Bank not supported</p> 
+                     <p>RC_TRANSACTION_NOT_ALLOWED = "88" // Transaction not allowed</p> 
+                     <p>RC_BANK_ACCOUNT_NOT_FOUND = "91" // Bank account not found</p> 
+                     <p>RC_TRANSACTION_NOT_FOUND = "92" // Transaction not found</p> 
+                     <p>RC_BANK_NOT_FOUND = "93" // Bank not found</p> 
+                     <p>RC_INSUFFICIENT_FUND = "94" // Insufficient fund</p> 
+                     <p>RC_REQUESTED_DATA_NOT_FOUND = "95" // Requested data not found</p> 
+                     <p>RC_LINK_DOWN = "100" // Link down</p> 
+                     <p>RC_SWITCHING_NOT_OPERATE = "101" // Switching not operate or switching host unreachable</p> 
+                     <p>RC_BANK_NOT_OPERATE = "102" // Bank does not operate or bank host unreachable</p> 
+                     <p>RC_INVALID_MERCHANT_ALTO = "103" // Invalid Merchant, this RC can be used by Acquirer if there is no longer business with the Merchant</p> 
+                     <p>RC_DO_NOT_HONOR = "104" // Do not Honor</p> 
+                     <p>RC_FORMAT_ERROR_ALTO = "105" // Format error</p> 
+                     <p>RC_TRANSACTION_NOT_PERMITTED_TERMINAL = "106" // Transaction not permitted to terminal</p> 
+                     <p>RC_SUSPECTED_FRAUD = "107" // Suspected fraud</p> 
+                     <p>RC_EXCEEDS_TRANSACTION_AMOUNT_LIMIT = "108" // Exceeds transaction amount limit</p> 
+                     <p>RC_RESTRICTED_CARD = "109" // Restricted card</p> 
+                     <p>RC_EXCEEDS_TRANSACTION_FREQUENCY = "110" // Exceeds transaction frequency limit</p> 
+                     <p>RC_DUPLICATE_TRANSMISSION = "111" // Duplicate transmission/duplicate QR</p> 
+                     <p>RC_INVALID_ROUTING = "112" // Invalid routing</p> 
+                        <p> *Noted : case ini URLnya harus di arahkan ke quickmock</p>
            <!-- Tombol untuk menutup popup -->
            <button class="close-btn" onclick="closePopup('popupE')">Tutup</button>
         </div>
